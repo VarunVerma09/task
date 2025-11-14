@@ -7,7 +7,7 @@ import api from "./routes/api.js"
 
 dotenv.config();
 const app = express();
-app.use(cors({ origin: "https://task-3-mxgv.onrender.com" }));
+app.use(cors({ origin: "https://task-3-dw1b.onrender.com/" }));
 app.use(express.json());
 
 
