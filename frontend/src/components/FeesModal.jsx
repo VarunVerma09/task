@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
+import { API_BASE } from '../api';
 
 
 export default function FeesModal({ uniId, open, onClose }){
 const [fees, setFees] = useState(null);
 useEffect(()=>{
 if(open){
-fetch((import.meta.env.VITE_API_BASE || 'http://localhost:5000')+`/api/university/${uniId}/fees`).then(r=>r.json()).then(setFees).catch(()=>setFees(null));
+fetch((API_BASE)+`/university/${uniId}/fees`).then(r=>r.json()).then(setFees).catch(()=>setFees(null));
 }
 },[open, uniId]);
 

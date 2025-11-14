@@ -100,12 +100,12 @@ export default function Landing1() {
               Check Course Fees
             </button>
 
-            <a
+            <Link
               href="#"
               className="px-6 py-3 rounded-xl border border-purple-600 text-purple-700 hover:bg-purple-50 transition"
             >
               Download Brochure
-            </a>
+            </Link>
           </div>
         </div>
 
