@@ -6,13 +6,11 @@ import Lead from "../models/schema.js";
 
 const router = express.Router();
 
-// Fix __dirname in ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Helper function to load JSON
 const getFeesData = () => {
-  const dataPath = path.join(__dirname, "../seed/fees.json"); // ✅ Correct path
+  const dataPath = path.join(__dirname, "../seed/fees.json");
   const raw = fs.readFileSync(dataPath, "utf8");
   return JSON.parse(raw);
 };
@@ -29,7 +27,6 @@ router.get("/university/:id", (req, res) => {
 
     res.json(uni);
   } catch (err) {
-    console.error(err);
     res.status(500).json({ error: "Server error" });
   }
 });
@@ -51,7 +48,6 @@ router.get("/university/:id/fees", (req, res) => {
       })),
     });
   } catch (err) {
-    console.error(err);
     res.status(500).json({ error: "Server error" });
   }
 });
@@ -72,12 +68,10 @@ router.post("/leads", async (req, res) => {
       pipedreamUrl,
     } = req.body;
 
-    // Validate phone (10 digits)
     if (!/^\d{10}$/.test(phone)) {
       return res.status(400).json({ error: "Phone must be 10 digits" });
     }
 
-    // Save to MongoDB
     const lead = new Lead({
       fullName,
       email,
@@ -90,7 +84,6 @@ router.post("/leads", async (req, res) => {
 
     await lead.save();
 
-    // Forward to Pipedream webhook (optional)
     if (pipedreamUrl) {
       try {
         await fetch(pipedreamUrl, {
@@ -98,14 +91,11 @@ router.post("/leads", async (req, res) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(req.body),
         });
-      } catch (err) {
-        console.warn("Failed to forward to pipedream:", err.message);
-      }
+      } catch (_) {}
     }
 
     res.json({ success: true, message: "Lead saved successfully" });
   } catch (err) {
-    console.error(err);
     res.status(500).json({ error: "Server error" });
   }
 });
