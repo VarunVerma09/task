@@ -27,7 +27,7 @@ export default function LeadForm({ uniId }) {
     try {
       const res = await fetch(
         (API_BASE) +
-          "/api/leads",
+          "/leads",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
