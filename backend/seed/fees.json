@@ -1,0 +1,24 @@
+[
+{
+"id": "uni1",
+"name": "Stellar Institute of Technology",
+"overview": "A private university focused on engineering and design.",
+"courses": [
+{ "name": "B.Tech Computer Science", "feeRange": "₹1.5L - ₹3.5L/yr", "duration": "4 yrs" },
+{ "name": "BBA", "feeRange": "₹80k - ₹1.5L/yr", "duration": "3 yrs" }
+],
+"placements": { "topCompanies": ["TCS","Infosys","StartUpX"], "avgCTC": "6 LPA" },
+"facilities": ["Hostel","Labs","Gym","Library"]
+},
+{
+"id": "uni2",
+"name": "Horizon University",
+"overview": "Private university with strong business & arts programs.",
+"courses": [
+{ "name": "MBA", "feeRange": "₹2L - ₹6L/yr", "duration": "2 yrs" },
+{ "name": "B.Des", "feeRange": "₹1L - ₹2.5L/yr", "duration": "4 yrs" }
+],
+"placements": { "topCompanies": ["Accenture","Delloite"], "avgCTC": "8 LPA" },
+"facilities": ["Design Labs","Cafeteria","Auditorium"]
+}
+]
