@@ -127,10 +127,10 @@ export default function Landing2() {
         onClose={() => setModalOpen(false)}
       />
     </div>
-    <div>   <div>
-      <Link to="https://task-2-mxgv.onrender.com/1"></Link>
+      <div>
+      <Link to="https://task-2-mxgv.onrender.com/2"></Link>
     </div>
-</div>
+
     </>
   );
 }
