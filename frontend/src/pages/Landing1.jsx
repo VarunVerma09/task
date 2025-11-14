@@ -19,6 +19,7 @@ export default function Landing1() {
     );
 
   return (
+    <>
     <div className="min-h-screen bg-white">
       {/* HERO SECTION */}
       <section className="relative h-[55vh] md:h-[70vh] w-full">
@@ -29,7 +30,7 @@ export default function Landing1() {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/70 to-purple-600/50" />
+        <div className="absolute inset-0  from-purple-900/70 to-purple-600/50" />
 
         {/* Text */}
         <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-20 text-white">
@@ -129,5 +130,8 @@ export default function Landing1() {
         onClose={() => setModalOpen(false)}
       />
     </div>
+
+    </>
+    
   );
 }

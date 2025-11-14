@@ -1,4 +1,4 @@
-export const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000/api';
+export const API_BASE =  'https://task-ulvq.onrender.com';
 
 
 export async function fetchUniversity(id){
