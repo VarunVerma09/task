@@ -25,7 +25,7 @@ export default function LeadForm({ uniId }) {
 
     try {
       const res = await fetch(
-        (import.meta.env.VITE_API_BASE || "http://localhost:5000") +
+        (API_BASE) +
           "/api/leads",
         {
           method: "POST",
