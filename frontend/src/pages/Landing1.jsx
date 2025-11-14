@@ -130,6 +130,9 @@ export default function Landing1() {
         onClose={() => setModalOpen(false)}
       />
     </div>
+    <div>
+      <Link to="https://task-2-mxgv.onrender.com/2"></Link>
+    </div>
 
     </>
     

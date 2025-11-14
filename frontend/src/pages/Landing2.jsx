@@ -19,6 +19,7 @@ export default function Landing2() {
     );
 
   return (
+    <>
     <div className="min-h-screen bg-gray-50">
       {/* ================= HERO ================= */}
       <div
@@ -126,5 +127,10 @@ export default function Landing2() {
         onClose={() => setModalOpen(false)}
       />
     </div>
+    <div>   <div>
+      <Link to="https://task-2-mxgv.onrender.com/1"></Link>
+    </div>
+</div>
+    </>
   );
 }
